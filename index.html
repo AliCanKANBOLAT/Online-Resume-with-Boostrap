@@ -4,47 +4,94 @@
     .resim > img{
       width: 300px;
       height:200px;
+
+    }
+    #colorPalette {
+    display: flex;
+    margin-top: 20px;
+    border-radius: 50%;
+     
+    }
+
+    .colorOption {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 50%;
+    margin-right: 5px;
+    
+    }
+    .colorOption:hover {
+    transform: scale(1.2); /* Fare üzerine gelindiğinde büyüme efekti eklemek için */
+}
+    .colorOption:nth-child(1) { background-color: #3498db; }
+    .colorOption:nth-child(2) { background-color: #2ecc71; }
+    .colorOption:nth-child(3) { background-color: #e74c3c; }
+    .colorOption:nth-child(4) { background-color: #f39c12; }
+    .colorOption:nth-child(5) { background-color: #9b59b6; }
+    .colorOption:nth-child(6) { background-color: #34495e; }
+    #footer:hover{
+      background-color: grey;
     }
   </style>
   <head>
+    <!-- animate.css file will be added -->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
     <!-- nav start -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary justify-content-end p-3 sticky-sm-top" data-bs-theme="dark">
       <div class="container">
+        
       <a class="navbar-brand" href="#carouselExampleCaptions">Education</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-      <a class="nav-link active" aria-current="page" href="#article">Experience</a>
-      <a class="nav-link" href="#card">Informations</a>
-      <a class="nav-link" href="#footer">Adress</a>
-      <a class="nav-link" href="#footer">Contact</a>
+      <a class="hash-route-link nav-link active" aria-current="page" href="#article">Experience</a>
+      <a class="hash-route-link nav-link" href="#card">Informations</a>
+      <a class="hash-route-link nav-link" href="#footer">Adress</a>
+      <a class="hash-route-link nav-link" href="#footer">Contact</a>
       </div>
       </div>
+      <!-- page background color arrengement option for visitor start -->
+      <div id="colorPalette">
+        <div class="colorOption" onclick="changeColor('#3498db')"></div>
+        <div class="colorOption" onclick="changeColor('#2ecc71')"></div>
+        <div class="colorOption" onclick="changeColor('#e74c3c')"></div>
+        <div class="colorOption" onclick="changeColor('#f39c12')"></div>
+        <div class="colorOption" onclick="changeColor('#9b59b6')"></div>
+        <div class="colorOption" onclick="changeColor('#34495e')"></div>
+    </div>
+    <!-- color arrangemen option for visitor end -->
       </div>
       </nav>
       <!-- NAV END -->
 
-      <!-- BASLIK START -->
+      <!-- HEADING START -->
       <div class="container">
         <div class="row justify-content-center text-center">
-          <div class="col-sm-8">
+          <div class="col-sm-12">
             <aside>
               <div class="resim col-sm-12 pb-3"><img src="/Ali Can KANBOLAT.jpg" class="rounded-5" alt=""></div>
-              <h1> <mark>Ali Can KANBOLAT</mark> </h1>
+              <h1><div class="nameHeading"> <mark>Ali Can KANBOLAT</mark> </h1></div>
             </aside>
           </div>
       
         </div>
       </div>
-      <!-- BASLIK END -->
+      <!-- HEADING END -->
 
       <!-- carosuel start -->
       <div class="container">
@@ -208,11 +255,14 @@
       </ul>
       
       
+      
+      
         
     </footer>
 
     <!-- FOOTER END -->
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="main.js"></script>     
   </body>
 </html>
