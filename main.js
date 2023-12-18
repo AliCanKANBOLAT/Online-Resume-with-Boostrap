@@ -54,25 +54,4 @@ resimAnimation.classList.add('animate__animated', 'animate__zoomInDown','animate
 const nameHeading = document.querySelector('.nameHeading')
 nameHeading.classList.add('animate__animated', 'animate__bounceInRight','animate__slow')
 
-//my project cardları icin hover
-var cardBodies = document.querySelectorAll('#cimbom');
-
-// Her bir .card-body elementi için olay dinleyicileri ekle
-cardBodies.forEach(function(cardBody) {
-  cardBody.addEventListener('mouseover', function() {
-    changeCardColor(cardBody);
-  });
-
-  cardBody.addEventListener('mouseout', function() {
-    resetCardColor(cardBody);
-  });
-});
-
-function changeCardColor(cardBody) {
-  cardBody.style.backgroundColor = 'black'; // Kartın üzerine gelindiğinde rengi değiştir
-}
-
-function resetCardColor(cardBody) {
-  cardBody.style.backgroundColor = ''; // Kartın üzerinden çıkıldığında rengi sıfırla (varsayılan rengi)
-}
 
