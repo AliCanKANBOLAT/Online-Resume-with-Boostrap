@@ -173,12 +173,42 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                 <div class="card-body hover">
                   <h5 class="card-title">Medication Dosage Calculators</h5>
                   <p class="card-text">This project is a simple web application that calculates the maximum dosage of certain medications based on the weight of the patient. It provides recommendations for medication dosage for Bupivacaine, Prilocaine, and Lidocaine.Calculates medication dosage based on patient weight.
-                    Provides recommendations for different medications.
-                    Responsive design for both desktop and mobile devices.
                     </p>
                   <p><a href="https://ilac-kg-miktar.netlify.app/" class="btn btn-warning">Check out the live site</a></p>
                    
                     <p><a href="https://github.com/AliCanKANBOLAT/ilac-kg" class="btn btn-primary">Go Github</a></p>
+                </div>
+              </div>
+              <div class="card shadow-lg rounded-3 text-bg-secondary mb-5" style="max-width: 20rem;">
+                <div class="card-header">14-JS Project</div>
+                <div class="card-body hover">
+                  <h5 class="card-title">Drum Kit</h5>
+                  <p class="card-text">This project is a Drum Kit application that allows users to play drum sounds using either the mouse by clicking on buttons or the keyboard by pressing specific keys. Each button represents a different drum sound.</p>
+                  
+                  <p><a href="https://drum-kit-demo-gs.netlify.app/" class="btn btn-warning">Check out the live site</a></p>
+                   
+                    <p><a href="https://github.com/AliCanKANBOLAT/Drum-Kit-Starting-Files" class="btn btn-primary">Go Github</a></p>
+                </div>
+              </div>
+              <div class="card shadow-lg rounded-3 text-bg-info mb-5" style="max-width: 20rem;">
+                <div class="card-header">15-JavaScript Learning Steps-JQUERY</div>
+                <div class="card-body hover">
+                  <h5 class="card-title">Simon Game</h5>
+                  <p class="card-text">Simon Game is a web-based application inspired by the classic Simon electronic game. The objective of the game is to advance through various levels by remembering and replicating random color sequences.</p>
+                  <p><a href="https://simongamewith-jquery.netlify.app/" class="btn btn-warning">Check out the live site</a></p>
+
+                    <p><a href="https://github.com/AliCanKANBOLAT/Simon-Game-Challenge-Starting-Files/tree/master" class="btn btn-primary">Go Github</a></p>
+                </div>
+              </div>
+              <div class="card shadow-lg rounded-3 text-bg-light mb-5" style="max-width: 20rem;">
+                <div class="card-header">16-JavaScript Learning Steps.</div>
+                <div class="card-body hover">
+                  <h5 class="card-title">E Commerce Frontend Challenge</h5>
+                  <p class="card-text">The purpose of this project is to design and implement the functionality of a single product page for an e-commerce website. Users should be able to view product details, add the product to the cart, and optionally remove added items from the cart.
+                    </p>
+                  <p><a href="https://ecommerce-frntnd.netlify.app/" class="btn btn-warning">Check out the live site</a></p>
+                   
+                    <p><a href="https://github.com/AliCanKANBOLAT/ecommerce-product-page-main/tree/master" class="btn btn-primary">Go Github</a></p>
                 </div>
               </div>
             </div>
@@ -202,29 +232,39 @@ cardBodies.forEach(function (cardBody) {
     resetCardColor(cardBody);
   });
 });
-
+let cardGroupNo = 0;
+let cardGroupNoLength = cardBodies.length
+// console.log(cardGroupNoLength)
 function changeCardColor(cardBody) {
   let cardGroupNo = Array.from(cardBodies).indexOf(cardBody);
-  if(cardGroupNo % 3 === 1) {
-  cardBody.style.backgroundColor = 'white'; // Kartın üzerine gelindiğinde rengi değiştir
+  if(cardGroupNo % 3 === 1 ){//&& cardGroupNo < cardGroupNoLength - 1) {
+  cardBody.style.backgroundColor = 'white'; 
   cardBody.style.color = 'grey';
   cardGroupNo++;
+  console.log(cardGroupNo)
   }
-  else if (cardGroupNo % 3 === 2) {
-    cardBody.style.backgroundColor = '#222f3e'; // Kartın üzerine gelindiğinde rengi değiştir
+  else if (cardGroupNo % 3 === 2){// && cardGroupNo < cardGroupNoLength - 1) {
+    cardBody.style.backgroundColor = '#222f3e';
   cardBody.style.color = '#48dbfb';
   cardGroupNo++;
+  console.log(cardGroupNo)
+  console.log(cardGroupNoLength)
   }
-  else {
-    cardBody.style.backgroundColor = '#2c3e50'; // Kartın üzerine gelindiğinde rengi değiştir
-  cardBody.style.color = 'white';
-  cardGroupNo++;
+ else if (cardGroupNo % 3 == 0){ // && cardGroupNo < cardGroupNoLength - 1 ) {
+    cardBody.style.backgroundColor = '#2c3e50';
+    cardBody.style.color = 'white';
+    cardGroupNo++;
+    console.log(cardGroupNo)
 }
+// else {
+//   cardBody.style.backgroundColor = '#222f3e';
+//   cardBody.style.color = '#48dbfb';
+// }
   
 }
 
 function resetCardColor(cardBody) {
-  cardBody.style.backgroundColor = ''; // Kartın üzerinden çıkıldığında rengi sıfırla (varsayılan rengi)
+  cardBody.style.backgroundColor = '';
   cardBody.style.color = '';
 }
     </script>
