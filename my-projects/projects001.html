@@ -24,13 +24,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
             
            }
            .card {
-            transition: transform 0.3s;
+            transition: 0.2s ease;
   
             }
 
           .card:hover {
-           transform: scale(1.05);
-           
+           transform: rotate(360deg) scale(1.1);
+           z-index: 1;
             
           }
           
@@ -253,6 +253,7 @@ function changeCardColor(cardBody) {
  else if (cardGroupNo % 3 == 0){ // && cardGroupNo < cardGroupNoLength - 1 ) {
     cardBody.style.backgroundColor = '#2c3e50';
     cardBody.style.color = 'white';
+
     cardGroupNo++;
     console.log(cardGroupNo)
 }
