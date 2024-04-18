@@ -244,7 +244,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                     <p><a href="https://github.com/AliCanKANBOLAT/working-with-form-in-React" class="btn btn-primary">Go Github</a></p>
                 </div>
               </div>
-              <div class="card shadow-lg rounded-3 text-bg-light mb-5" style="max-width: 20rem;">
+              <div class="card shadow-lg rounded-3 text-bg-secondary mb-5" style="max-width: 20rem;">
                 <div class="card-header">20-React Learning Steps.</div>
                 <div class="card-body hover">
                   <h5 class="card-title">React-Router-dom</h5>
@@ -253,6 +253,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                   <p><a href="https://react-router-dom-practices.netlify.app/" class="btn btn-warning">Check out the live site</a></p>
                    
                     <p><a href="https://github.com/AliCanKANBOLAT/ReactRouterDOM.git" class="btn btn-primary">Go Github</a></p>
+                </div>
+              </div>
+              <div class="card shadow-lg rounded-3 text-bg-info mb-5" style="max-width: 20rem;">
+                <div class="card-header">21-React Router Dom Practice-2</div>
+                <div class="card-body hover">
+                  <h5 class="card-title">Ecu Boost Web site</h5>
+                  <p class="card-text">In my development process for the ECU Boost website, i leveraged React Router DOM to organize and navigate between different sections of the application. By defining routes for specific URLs and associating them with corresponding components, i effectively controlled the rendering of content based on user interactions. This approach enabled us to create a structured and intuitive user experience, ensuring easy navigation and access to relevant information throughout the website.</p>
+                  
+                  <p><a href="https://react-router-dom-practice-2.netlify.app/" class="btn btn-warning">Check out the live site</a></p>
+                   
+                    <p><a href="https://github.com/AliCanKANBOLAT/repeat-info-rrd.git" class="btn btn-primary">Go Github</a></p>
                 </div>
               </div>
             </div>
@@ -280,38 +291,46 @@ let cardGroupNo = 0;
 let cardGroupNoLength = cardBodies.length
 // console.log(cardGroupNoLength)
 function changeCardColor(cardBody) {
-  let cardGroupNo = Array.from(cardBodies).indexOf(cardBody);
-  if(cardGroupNo % 3 === 1 ){//&& cardGroupNo < cardGroupNoLength - 1) {
+  let cardGroupNo = Array.from(cardBodies).indexOf(cardBody)+1;
+  if(cardGroupNo % 3 === 1 ) //&& cardGroupNo < cardGroupNoLength ) 
+  {
+  cardBody.style.backgroundColor = '#2c3e50';
+  cardBody.style.color = 'white';
+  cardGroupNo++;
+  
+ 
+  }
+  else if (cardGroupNo % 3 === 2 ) //&& cardGroupNo < cardGroupNoLength ) 
+  {
   cardBody.style.backgroundColor = 'white'; 
   cardBody.style.color = 'grey';
   cardGroupNo++;
-  console.log(cardGroupNo)
+  
+  
   }
-  else if (cardGroupNo % 3 === 2){// && cardGroupNo < cardGroupNoLength - 1) {
-  cardBody.style.backgroundColor = '#222f3e';
-  cardBody.style.color = '#48dbfb';
-  cardGroupNo++;
-  console.log(cardGroupNo)
-  console.log(cardGroupNoLength)
-  }
- else if (cardGroupNo % 3 == 0){ // && cardGroupNo < cardGroupNoLength - 1 ) {
-    cardBody.style.backgroundColor = '#2c3e50';
-    cardBody.style.color = 'white';
-
+ else if (cardGroupNo % 3 == 0 ) //&& cardGroupNo < cardGroupNoLength  ) 
+ {
+    cardBody.style.backgroundColor =  '#222f3e';
+    cardBody.style.color =  '#48dbfb';
     cardGroupNo++;
-    console.log(cardGroupNo)
+    
 }
 else { 
   cardBody.style.backgroundColor = '#222f3e';
   cardBody.style.color = '#48dbfb';
+  cardGroupNo++;
+  console.log("last cardGroupNo number:",cardGroupNo)
  }
   
-}
+}   
 
 function resetCardColor(cardBody) {
   cardBody.style.backgroundColor = '';
   cardBody.style.color = '';
 }
+console.log("card group no last number:", cardGroupNo) 
+
+
     </script>
   </body>
 </html>
